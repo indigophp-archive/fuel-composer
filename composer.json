@@ -1,7 +1,7 @@
 {
 	"name": "indigophp/fuel-composer",
 	"type": "fuel-package",
-	"description": "Package for Fuel 1.x to help development with Composer",
+	"description": "Fuel 1.x package to help development with Composer",
 	"license": "MIT",
 	"keywords": ["fuel", "composer"],
 	"homepage": "https://indigophp.com",
