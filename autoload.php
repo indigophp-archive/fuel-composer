@@ -12,7 +12,7 @@ class CustomLoader
     public function loadClass($class)
     {
         $result = $this->loader->loadClass($class);
-        if ($result && method_exists($class, '_init')) {
+        if ($result && class_exists($class, false) && method_exists($class, '_init')) {
             call_user_func(array($class, '_init'));
         }
 
