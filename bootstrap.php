@@ -16,7 +16,9 @@
 
 function composer($path)
 {
-	require_once($path . 'vendor/autoload.php');
+	$loader = require_once($path . 'vendor/autoload.php');
+	$loader->unregister();
+	spl_autoload_register(array(new CustomLoader($loader), 'loadClass'));
 }
 
 foreach (\Config::get('composer.packages', array()) as $package)
