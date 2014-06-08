@@ -20,7 +20,7 @@ Via Composer
 ## Usage
 
 1. Load this package in Fuel
-2. Create config by issuing `oil g config composer`
+2. Create config by running `oil g config composer`
 3. Edit `APPPATH/config/composer.php`
 
 ## Contributing

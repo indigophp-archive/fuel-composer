@@ -1,15 +1,12 @@
 <?php
 
-/**
- * Part of Fuel Composer package.
+/*
+ * This file is part of the Fuel Composer package.
  *
- * @package 	Fuel
- * @subpackage	Composer
- * @version 	1.0
- * @author		Indigo Development Team
- * @license 	MIT License
- * @copyright	2013 - 2014 Indigo Development Team
- * @link		https://indigophp.com
+ * (c) Indigo Development Team
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**

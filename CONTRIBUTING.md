@@ -21,7 +21,9 @@ We accept contributions via Pull Requests on [Github](https://github.com/indigop
 
 - **Sign your work** - Sign all your commits to let us know you certify the [Developer's Certificate of Origin](#developers-certificate-of-origin).
 
+
 ## Developer's Certificate of Origin
+
 By contributing you certify the below:
 ```
 Developer's Certificate of Origin 1.1
