@@ -35,9 +35,12 @@ class Composer
 		// Check whether autoloader is registered at all
 		if ($loaders and in_array(array($loader, 'loadClass'), $loaders))
 		{
+			// Create new loader first using the previous one
+			$newLoader = new Loader($loader);
+
 			$loader->unregister();
 
-			return spl_autoload_register(array(new Loader($loader), 'loadClass'));
+			return spl_autoload_register(array($newLoader, 'loadClass'));
 		}
 
 		return false;

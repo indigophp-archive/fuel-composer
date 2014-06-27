@@ -12,7 +12,7 @@
 namespace Indigo\Fuel;
 
 /**
- * Composer FuelLoader class
+ * Composer Fuel Loader class
  *
  * Makes it possible to autoload a class and call a static function as well
  *
@@ -21,20 +21,22 @@ namespace Indigo\Fuel;
  */
 class Loader
 {
-    private $loader;
+	private $loader;
 
-    public function __construct($loader)
-    {
-        $this->loader = $loader;
-    }
+	public function __construct($loader)
+	{
+		$this->loader = $loader;
+	}
 
-    public function loadClass($class)
-    {
-        $result = $this->loader->loadClass($class);
-        if ($result && class_exists($class, false) && method_exists($class, '_init')) {
-            call_user_func(array($class, '_init'));
-        }
+	public function loadClass($class)
+	{
+		$result = $this->loader->loadClass($class);
 
-        return $result;
-    }
+		if ($result and class_exists($class, false) and method_exists($class, '_init'))
+		{
+			call_user_func(array($class, '_init'));
+		}
+
+		return $result;
+	}
 }
