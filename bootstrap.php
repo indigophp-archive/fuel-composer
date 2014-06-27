@@ -9,27 +9,16 @@
  * file that was distributed with this source code.
  */
 
-\Config::load('composer', true);
+use Indigo\Fuel\Composer;
 
-function composer($path)
-{
-	$loader = require($path . 'vendor/autoload.php');
-	$loader->unregister();
-	spl_autoload_register(array(new CustomLoader($loader), 'loadClass'));
-}
+\Config::load('composer', true);
 
 foreach (\Config::get('composer.packages', array()) as $package)
 {
-	if ($package = \Package::exists($package))
-	{
-		composer($package);
-	}
+	Composer::package($package);
 }
 
 foreach (\Config::get('composer.modules', array()) as $module)
 {
-	if ($module = \Module::exists($module))
-	{
-		composer($module);
-	}
+	Composer::module($module);
 }
