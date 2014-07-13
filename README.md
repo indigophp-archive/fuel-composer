@@ -20,6 +20,7 @@ Via Composer
 }
 ```
 
+
 ## Usage
 
 If you want to use only the autoloader feature you are done by installing this package.
@@ -29,6 +30,7 @@ If you want to use the package for development:
 1. Load this package in Fuel
 2. Create config by running `oil g config composer`
 3. Edit `APPPATH/config/composer.php`
+
 
 ## Contributing
 
