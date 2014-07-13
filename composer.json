@@ -1,26 +1,29 @@
 {
-	"name": "indigophp/fuel-composer",
-	"type": "fuel-package",
-	"description": "Fuel 1.x package to help development with Composer",
-	"license": "MIT",
-	"keywords": ["fuel", "composer"],
-	"homepage": "https://indigophp.com",
-	"authors": [
-		{
-			"name": "Márk Sági-Kazár",
-			"email": "mark.sagikazar@gmail.com"
-		}
-	],
-	"require": {
-		"php": ">=5.3.3",
-		"composer/installers": "~1.0"
-	},
-	"autoload": {
+    "name": "indigophp/fuel-composer",
+    "type": "fuel-package",
+    "description": "Fuel 1.x package to help development with Composer",
+    "license": "MIT",
+    "keywords": ["fuel", "composer"],
+    "homepage": "https://indigophp.com",
+    "authors": [
+        {
+            "name": "Márk Sági-Kazár",
+            "email": "mark.sagikazar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Indigo\\Fuel\\": "classes/"
+        },
         "files": [
             "autoload.php"
         ]
-	},
-	"extra": {
-		"installer-name": "composer"
-	}
+    },
+    "extra": {
+        "installer-name": "composer"
+    }
 }

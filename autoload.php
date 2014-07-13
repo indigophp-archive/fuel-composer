@@ -9,34 +9,10 @@
  * file that was distributed with this source code.
  */
 
-/**
- * Composer CustomLoader class
- *
- * Makes it possible to autoload a class and call a static function as well
- *
- * @link https://github.com/composer/composer/issues/1493#issuecomment-12492276
- * @author Márk Sági-Kazár <mark.sagikazar@gmail.com>
- */
-class CustomLoader
+use Indigo\Fuel\Composer;
+
+// Check whether there is a VENDORPATH
+if (defined('VENDORPATH'))
 {
-    private $loader;
-
-    public function __construct($loader)
-    {
-        $this->loader = $loader;
-    }
-
-    public function loadClass($class)
-    {
-        $result = $this->loader->loadClass($class);
-        if ($result && class_exists($class, false) && method_exists($class, '_init')) {
-            call_user_func(array($class, '_init'));
-        }
-
-        return $result;
-    }
+	Composer::path(VENDORPATH.'autoload.php');
 }
-
-$loader = require VENDORPATH.'autoload.php';
-$loader->unregister();
-spl_autoload_register(array(new CustomLoader($loader), 'loadClass'));
