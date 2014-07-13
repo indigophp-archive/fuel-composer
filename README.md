@@ -1,5 +1,9 @@
 # Fuel Composer
 
+[![Latest Stable Version](https://poser.pugx.org/indigophp/fuel-composer/v/stable.png)](https://packagist.org/packages/indigophp/fuel-composer)
+[![Total Downloads](https://poser.pugx.org/indigophp/fuel-composer/downloads.png)](https://packagist.org/packages/indigophp/fuel-composer)
+[![License](https://poser.pugx.org/indigophp/fuel-composer/license.png)](https://packagist.org/packages/indigophp/fuel-composer)
+
 **Fuel 1.x package to help development with Composer.**
 
 This package has multiple purposes:
